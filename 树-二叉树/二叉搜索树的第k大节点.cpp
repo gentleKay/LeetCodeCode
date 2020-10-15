@@ -51,7 +51,7 @@ public:
  */
 class Solution {
 public:
-int res=0,i=0;//res存储节点值，i计数
+	int res=0,i=0;//res存储节点值，i计数
     int kthLargest(TreeNode* root, int k) {      
         myfun(root,k);   
         return res;
