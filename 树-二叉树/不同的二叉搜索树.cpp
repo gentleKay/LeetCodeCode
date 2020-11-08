@@ -13,3 +13,20 @@ public:
         return G[n];
     }
 };
+
+
+// 用的是 一个公式： C(n+1) = 2*(2n+1)*C(n) / (n + 2)
+
+class Solution {
+public:
+     int numTrees(int n) {
+        long long llSum = 1;
+
+        for (int i = 0; i < n; i++)
+        {
+            llSum = 2 * (2 * i + 1) * llSum / (i + 2);
+        }
+
+        return llSum;
+    }
+};
